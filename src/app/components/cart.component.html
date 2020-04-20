@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"><h3></h3></div>
+        <div class="col-2"><h3>Name</h3></div>
+        <div class="col-2"><h3></h3></div>
+        <div class="col-2"><h3>Price</h3></div>
+        <div class="col-2"><h3>Quantity</h3></div>
+        <div class="col-2"><h3>Sub Total</h3></div>
+    </div>
+    <div class="row" *ngFor="let item of items">
+        <div class="col-2"><a (click)="remove(item.product.id)">X</a></div>
+        <div class="col-2">{{item.product.name}}</div>
+        <div class="col-2"><img src="{{item.product.image}}" width="100"></div>
+        <div class="col-2">{{item.product.price}}</div>
+        <div class="col-2">{{item.quantity}}</div>
+        <div class="col-2">{{item.product.price * item.quantity}}</div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-2"></div>
+        <div class="col-2"></div>
+        <div class="col-2"></div>
+        <div class="col-2"><h3>Total</h3></div>
+        <div class="col-2"><h3>{{total}}</h3></div>
+    </div>
+</div>

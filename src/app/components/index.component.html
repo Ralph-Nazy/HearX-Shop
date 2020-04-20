@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12"><h3>HearX Shop</h3></div>
+    </div>
+    <div class="row">
+      <div class="col-3" *ngFor="let product of products">
+           <img src="{{product.image}}">
+           <h4>{{product.name}}</h4>
+           <h5>R {{product.price}}</h5>
+           <a class="button" [routerLink]="['/cart', { id:product.id }]">Add to Cart</a>
+      </div>
+    </div>
+</div>
